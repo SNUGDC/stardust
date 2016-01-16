@@ -47,7 +47,10 @@
   <ItemGroup>
      <Compile Include="Assets\_Scripts\DoorContorller.cs" />
      <Compile Include="Assets\_Scripts\PaletteCaller.cs" />
+     <Compile Include="Assets\_Scripts\ParticleCaller.cs" />
      <Compile Include="Assets\_Scripts\TargetCaller.cs" />
+     <Compile Include="Assets\_Simple Particle Ribbon sample\Scripts\ReverseNormals.cs" />
+     <None Include="Assets\_Simple Particle Ribbon sample\readme_Simple_Particle_Ribbon.txt" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>

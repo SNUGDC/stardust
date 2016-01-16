@@ -9,7 +9,6 @@ public class PaletteCaller : MonoBehaviour {
 	GameObject[] Palettes;
 	Vector3[] tempPos;
 	Vector3[] temp;
-	bool back = false;
 	int routine = 0;
 
 	public bool active = false;
