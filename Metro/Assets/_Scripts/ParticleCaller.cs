@@ -14,12 +14,17 @@ public class ParticleCaller : MonoBehaviour {
 			
 			Vector3 tempPosition = r.GetPoint (Distance);//tempPosition represents '
 			transform.position = tempPosition;//transform.position is 'position of the transform in world space
+			/*
+			if (Input.GetMouseButtonUp (0)) 
+			{
+				someParticleEmitter.emit =true;
+			}
+			else
+			{
+				someParticleEmitter.emit = false;
+			}
+			*/
+
 		}
-		/*
-		if (Input.GetMouseButtonUp (0)) 
-		{
-			IEnumerator 
-		}
-		*/
 	}
 }

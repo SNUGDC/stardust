@@ -48,6 +48,7 @@
      <Compile Include="Assets\_Scripts\DoorContorller.cs" />
      <Compile Include="Assets\_Scripts\PaletteCaller.cs" />
      <Compile Include="Assets\_Scripts\ParticleCaller.cs" />
+     <Compile Include="Assets\_Scripts\ParticleController.cs" />
      <Compile Include="Assets\_Scripts\TargetCaller.cs" />
      <Compile Include="Assets\_Simple Particle Ribbon sample\Scripts\ReverseNormals.cs" />
      <None Include="Assets\_Simple Particle Ribbon sample\readme_Simple_Particle_Ribbon.txt" />
