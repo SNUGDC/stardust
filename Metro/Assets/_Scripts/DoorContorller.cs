@@ -36,7 +36,7 @@ public class DoorContorller : MonoBehaviour {
 
 		foreach (GameObject passenger in Passengers) 
 		{
-			passenger.GetComponentInChildren<Renderer>().sortingOrder = 0;
+			passenger.GetComponent<Renderer>().sortingOrder = 0;
 		}
 	}
 

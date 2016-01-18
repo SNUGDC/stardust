@@ -72,7 +72,7 @@ public class PaletteCaller : MonoBehaviour {
 		active = true;
 		for (int i = 0; i < Palettes.GetLength(0); i++) 
 		{
-			Palettes[i].transform.position = transform.position;
+			Palettes[i].transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		}
 	}
 }
