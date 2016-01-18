@@ -1,10 +1,13 @@
-﻿using UnityEngine;
+﻿/*
+using UnityEngine;
 using System.Collections;
 
-public class TargetCaller: MonoBehaviour {
+public class CombinationCaller : MonoBehaviour {
 
 
 	public GameObject Target;
+
+	private int combiCount = 0;
 
 	GameObject[] targetClass; 
 
@@ -30,12 +33,18 @@ public class TargetCaller: MonoBehaviour {
 		Target.SetActive (true);
 		GetComponentInParent<PaletteCaller> ().active = false;//Palette erase
 	}
-	
+
+	void Combination(GameObject Target)
+	{
+		foreach (GameObject target in targetClass) 
+		{
+			if (Target.SetActive (true)) 
+			{
+				combiCount = 1;
+			}
+
+		}
+	}
 }
-
-
-
-
-
-
+*/
 

@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Simple Particle Ribbon sample\Scripts\ReverseNormals.cs" />
+     <Compile Include="Assets\_Scripts\CombinationCaller.cs" />
      <Compile Include="Assets\_Scripts\DoorContorller.cs" />
      <Compile Include="Assets\_Scripts\PaletteCaller.cs" />
      <Compile Include="Assets\_Scripts\ParticleCaller.cs" />
