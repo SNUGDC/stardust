@@ -24,7 +24,6 @@ public class DoorContorller : MonoBehaviour {
 		if (transfer.activeSelf) 
 		{
 			StartCoroutine(DoorAnimation());
-            Girl.GetComponent<GirlController>().Go = true;
 		}
 
 	}
@@ -36,6 +35,7 @@ public class DoorContorller : MonoBehaviour {
 
 		yield return new WaitForSeconds (Interval);
 
+        Girl.GetComponent<GirlController>().Go = true;
 		foreach (GameObject passenger in Passengers) 
 		{
 			passenger.GetComponent<Renderer>().sortingOrder = 0;

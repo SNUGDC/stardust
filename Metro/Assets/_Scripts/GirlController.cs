@@ -9,6 +9,7 @@ public class GirlController : MonoBehaviour {
 
     void Update()
     {
+        Debug.Log("a");
         if (Go == true)
         {
             Debug.Log("aa");
