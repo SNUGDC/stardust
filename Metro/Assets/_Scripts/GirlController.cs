@@ -3,17 +3,24 @@ using System.Collections;
 
 public class GirlController : MonoBehaviour {
 
-    public bool Go = false;
+    public bool Go = true;
 
     public float Velocity;
 
-    void Update()
+    void Start()
     {
-        Debug.Log("a");
+        GetComponent<Animator>().SetTrigger("Girl");
+    }
+
+    void FixedUpdate()
+    {
         if (Go == true)
         {
-            Debug.Log("aa");
             GetComponent<Rigidbody2D>().velocity = new Vector3(Velocity, 0, 0);
+        }
+        if (Go == false)
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector3(0f, 0f, 0f);
         }
     }
 }

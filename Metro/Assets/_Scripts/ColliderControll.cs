@@ -13,15 +13,24 @@ public class ColliderControll : MonoBehaviour {
         if (Go && Condition)
         {
             Girl.GetComponent<GirlController>().Go = true;
-        }
-        else
-        {
-            Girl.GetComponent<GirlController>().Go = false;
+            Girl.GetComponent<Animator>().SetTrigger("Girl");
         }
     }
 
-    void OnTriggerEnter()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Go = true;
+        if (other.tag == "Girl")
+        {
+            Girl.GetComponent<GirlController>().Go = false;
+            Girl.GetComponent<Animator>().SetTrigger("GirlStop");
+            Go = true;
+        }
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Girl")
+        {
+            Go = false;
+        }
     }
 }

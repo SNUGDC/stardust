@@ -6,7 +6,7 @@ public class CrowdController : MonoBehaviour {
 	Animator anim;
 
 	public GameObject[] baseSprites;
-
+    public GameObject Collidercontroll;
 	public Sprite NewSprite;
 	
 	void Awake()
@@ -24,9 +24,11 @@ public class CrowdController : MonoBehaviour {
 
 		GetComponentInParent<Collider2D> ().enabled = false;
 
-		foreach (GameObject baseSprite in baseSprites) {
+		foreach (GameObject baseSprite in baseSprites)
+        {
 			baseSprite.GetComponent<SpriteRenderer> ().sprite = NewSprite;
 		}
-	}
+        Collidercontroll.GetComponent<ColliderControll>().Condition = true;
+    }
 	
 }

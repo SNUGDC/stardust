@@ -4,7 +4,7 @@ using System.Collections;
 public class TargetExchanger : MonoBehaviour {
 
 	public GameObject Target;
-
+    
 	public GameObject ExchangedTarget;
 
 	public GameObject ColliderDestory;
@@ -21,7 +21,6 @@ public class TargetExchanger : MonoBehaviour {
 		Target.SetActive (false);
 
 		ExchangedTarget.SetActive (true);
-
-		ColliderDestory.GetComponent<Collider2D> ().enabled = false;
+        ColliderDestory.GetComponent<Collider2D> ().enabled = false;
 	}
 }

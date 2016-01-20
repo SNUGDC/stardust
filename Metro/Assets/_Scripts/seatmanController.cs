@@ -6,6 +6,7 @@ public class seatmanController : MonoBehaviour {
 	public Sprite Getup;
 	public Sprite Getmove;
 	public Sprite Seat;
+    public GameObject Collidercontroll;
 
 	void Start () {
 		StartCoroutine (moveanim ());
@@ -22,6 +23,7 @@ public class seatmanController : MonoBehaviour {
 		GetComponent<SpriteRenderer> ().sprite = Getup;
 		yield return new WaitForSeconds (0.5f);
 		GetComponent<SpriteRenderer> ().sprite = Seat;
+        Collidercontroll.GetComponent<ColliderControll>().Condition = true;
 
-	}
+    }
 }

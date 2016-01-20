@@ -5,7 +5,7 @@ public class DoorContorller : MonoBehaviour {
 
 	Animator anim;
 	public GameObject transfer;
-    public GameObject Girl;
+    public GameObject Collidercontroll;
 
 	public float Interval;
 
@@ -35,7 +35,7 @@ public class DoorContorller : MonoBehaviour {
 
 		yield return new WaitForSeconds (Interval);
 
-        Girl.GetComponent<GirlController>().Go = true;
+        Collidercontroll.GetComponent<ColliderControll>().Condition = true;
 		foreach (GameObject passenger in Passengers) 
 		{
 			passenger.GetComponent<Renderer>().sortingOrder = 0;
