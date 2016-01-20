@@ -5,6 +5,7 @@ public class DoorContorller : MonoBehaviour {
 
 	Animator anim;
 	public GameObject transfer;
+    public GameObject Girl;
 
 	public float Interval;
 
@@ -23,6 +24,7 @@ public class DoorContorller : MonoBehaviour {
 		if (transfer.activeSelf) 
 		{
 			StartCoroutine(DoorAnimation());
+            Girl.GetComponent<GirlController>().Go = true;
 		}
 
 	}

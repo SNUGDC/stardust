@@ -4,7 +4,7 @@ using System.Collections;
 public class PaletteCaller : MonoBehaviour {
 
 
-	public string tag;
+	public string Palettetag;
 
 	GameObject[] Palettes;
 	Vector3[] tempPos;
@@ -18,7 +18,7 @@ public class PaletteCaller : MonoBehaviour {
 
 	void Start () {
 	
-		Palettes = GameObject.FindGameObjectsWithTag (tag);
+		Palettes = GameObject.FindGameObjectsWithTag (Palettetag);
 
 		tempPos = new Vector3[Palettes.GetLength(0)];
 		temp = new Vector3[Palettes.GetLength (0)];
