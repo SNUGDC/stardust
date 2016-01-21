@@ -28,6 +28,7 @@ public class CrowdController : MonoBehaviour {
         {
 			baseSprite.GetComponent<SpriteRenderer> ().sprite = NewSprite;
 		}
+        yield return new WaitForSeconds(1);
         Collidercontroll.GetComponent<ColliderControll>().Condition = true;
     }
 	

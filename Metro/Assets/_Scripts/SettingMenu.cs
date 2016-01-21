@@ -3,17 +3,17 @@ using System.Collections;
 
 public class SettingMenu : MonoBehaviour {
 
-    public static float MusicVolume = 0.5f;
-    public static float SFXVolume = 0.5f;
+    public float MusicVolume = 0.5f;
+    public float SFXVolume = 0.5f;
 
     void Update()
     {
-        GetComponent<AudioSource>().volume = MusicVolume;
+        AudioControll.Volume = MusicVolume;
     }
 
-    public void Music(float volume)
+    public void Music(float value)
     {
-        MusicVolume = volume;
+        MusicVolume = value;
     }
 
     public void SFX(float SFXvolume)

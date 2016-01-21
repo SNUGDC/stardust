@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Simple Particle Ribbon sample\Scripts\ReverseNormals.cs" />
+    <Compile Include="Assets\_Scripts\AudioControll.cs" />
     <Compile Include="Assets\_Scripts\CameraController.cs" />
     <Compile Include="Assets\_Scripts\ColliderControll.cs" />
     <Compile Include="Assets\_Scripts\CombinationCaller.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Assets\_Scripts\GundalCollider.cs" />
     <Compile Include="Assets\_Scripts\GundalControll.cs" />
     <Compile Include="Assets\_Scripts\MainMenu.cs" />
+    <Compile Include="Assets\_Scripts\ObjectCollector.cs" />
     <Compile Include="Assets\_Scripts\PaletteCaller.cs" />
     <Compile Include="Assets\_Scripts\ParticleCaller.cs" />
     <Compile Include="Assets\_Scripts\ParticleController.cs" />
