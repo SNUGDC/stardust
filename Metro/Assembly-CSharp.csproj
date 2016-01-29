@@ -60,6 +60,7 @@
      <Compile Include="Assets\_Scripts\PaletteCaller.cs" />
      <Compile Include="Assets\_Scripts\ParticleCaller.cs" />
      <Compile Include="Assets\_Scripts\SettingMenu.cs" />
+     <Compile Include="Assets\_Scripts\StageSelect.cs" />
      <Compile Include="Assets\_Scripts\TargetCaller.cs" />
      <Compile Include="Assets\_Scripts\TargetExchanger.cs" />
      <Compile Include="Assets\_Scripts\seatmanController.cs" />

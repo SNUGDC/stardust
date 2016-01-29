@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MainMenu : MonoBehaviour {
+public class StageSelect : MonoBehaviour {
 
 	public void LoadScene(int level)
 	{
