@@ -49,7 +49,8 @@ public class CombinationCaller : MonoBehaviour {
 
 		GetComponentInParent<PaletteCaller> ().active = false;//Palette erase
 	}
-	
+
+
 }
 
 

@@ -6,5 +6,5 @@ public class StageSelect : MonoBehaviour {
 	public void LoadScene(int level)
 	{
 		Application.LoadLevel(level);
-	} 
+	}
 }

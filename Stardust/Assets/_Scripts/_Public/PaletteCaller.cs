@@ -10,7 +10,7 @@ public class PaletteCaller : MonoBehaviour {
 	Vector3[] tempPos;
 	Vector3[] temp;
 	int routine = 0;
-
+	private bool wasMouseDown;
 	public bool active = false;
 	public float smoothTime = 0.18f;
 
@@ -32,6 +32,7 @@ public class PaletteCaller : MonoBehaviour {
 
 	void Update () 
 	{
+
 		if (Input.GetMouseButtonDown(0))
 		{
 			if (active == true) 
@@ -48,6 +49,7 @@ public class PaletteCaller : MonoBehaviour {
 		{
 			PaletteCall ();
 		}
+
 		if (routine == 2) 
 		{
 			for (int i = 0; i < Palettes.GetLength (0); i++) 

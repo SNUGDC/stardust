@@ -5,6 +5,6 @@ public class MainMenu : MonoBehaviour {
 
 	public void LoadScene(int level)
 	{
-		Application.LoadLevel(level);
+		Application.LoadLevel (level);
 	} 
 }
