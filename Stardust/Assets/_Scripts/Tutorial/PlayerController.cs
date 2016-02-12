@@ -6,17 +6,17 @@ public class PlayerController : MonoBehaviour {
 
 	bool facingRight = true;
 	public float Speed;
-
 	private Rigidbody2D rb;
+
 
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
 	}
 
-	void FixedUpdate ()
+	void FixedUpdate()
 	{
-		if (Input.GetMouseButton(0))
-		{	
+		if (Input.GetMouseButton(0)) 
+		{
 			MovePlayer ();
 		}
 	}
@@ -26,11 +26,12 @@ public class PlayerController : MonoBehaviour {
 		Vector2 touchVector = new Vector2 (touchPositionX / Mathf.Abs(touchPositionX), 0);
 		if (Input.mousePosition.x > (Screen.width / 2) && facingRight) 
 		{
-			rb.AddForce (touchVector * Speed * Time.deltaTime);
+			rb.velocity = touchVector * Speed * Time.deltaTime;
+
 		}
-		else if (Input.mousePosition.x < (Screen.width / 2) && !facingRight) 
+		if (Input.mousePosition.x < (Screen.width / 2) && !facingRight) 
 		{
-			rb.AddForce (-touchVector * Speed * Time.deltaTime);
+			rb.velocity = -touchVector * Speed * Time.deltaTime;	
 		}
 
 		else if (Input.mousePosition.x > (Screen.width / 2) && !facingRight) 
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviour {
 			Flip ();
 		}
 	}
+
 	void Flip()
 	{
 		facingRight = !facingRight;

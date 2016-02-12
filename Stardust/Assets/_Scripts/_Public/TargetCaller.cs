@@ -28,9 +28,8 @@ public class TargetCaller: MonoBehaviour {
 			target.SetActive (false);
 		}
 		Target.SetActive (true);
-		GetComponentInParent<PaletteCaller> ().active = false;//Palette erase
+		GetComponentInParent<newPaletteCaller> ().active = false;//Palette erase
 	}
-	
 }
 
 

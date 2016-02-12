@@ -46,24 +46,25 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Simple Particle Ribbon sample\Scripts\ReverseNormals.cs" />
-     <Compile Include="Assets\_Scripts\CameraController.cs" />
      <Compile Include="Assets\_Scripts\Tutorial\PlayerController.cs" />
-     <Compile Include="Assets\_Scripts\_ChapterMetro\ColliderControll.cs" />
-     <Compile Include="Assets\_Scripts\_ChapterMetro\CombinationCaller.cs" />
-     <Compile Include="Assets\_Scripts\_ChapterMetro\CrowdController.cs" />
-     <Compile Include="Assets\_Scripts\_ChapterMetro\DoorContorller.cs" />
-     <Compile Include="Assets\_Scripts\_ChapterMetro\GirlController.cs" />
-     <Compile Include="Assets\_Scripts\_ChapterMetro\GundalCollider.cs" />
-     <Compile Include="Assets\_Scripts\_ChapterMetro\GundalControll.cs" />
-     <Compile Include="Assets\_Scripts\_ChapterMetro\ObjectCollector.cs" />
-     <Compile Include="Assets\_Scripts\_ChapterMetro\TargetExchanger.cs" />
-     <Compile Include="Assets\_Scripts\_ChapterMetro\seatmanController.cs" />
      <Compile Include="Assets\_Scripts\_MainMenu\MainMenu.cs" />
+     <Compile Include="Assets\_Scripts\_Public\CameraController.cs" />
      <Compile Include="Assets\_Scripts\_Public\PaletteCaller.cs" />
      <Compile Include="Assets\_Scripts\_Public\ParticleCaller.cs" />
      <Compile Include="Assets\_Scripts\_Public\TargetCaller.cs" />
      <Compile Include="Assets\_Scripts\_SettingMenu\AudioControll.cs" />
      <Compile Include="Assets\_Scripts\_SettingMenu\SettingMenu.cs" />
+     <Compile Include="Assets\_Scripts\_StageCave\newPaletteCaller.cs" />
+     <Compile Include="Assets\_Scripts\_StageMetro\ColliderControll.cs" />
+     <Compile Include="Assets\_Scripts\_StageMetro\CombinationCaller.cs" />
+     <Compile Include="Assets\_Scripts\_StageMetro\CrowdController.cs" />
+     <Compile Include="Assets\_Scripts\_StageMetro\DoorContorller.cs" />
+     <Compile Include="Assets\_Scripts\_StageMetro\GirlController.cs" />
+     <Compile Include="Assets\_Scripts\_StageMetro\GundalCollider.cs" />
+     <Compile Include="Assets\_Scripts\_StageMetro\GundalControll.cs" />
+     <Compile Include="Assets\_Scripts\_StageMetro\ObjectCollector.cs" />
+     <Compile Include="Assets\_Scripts\_StageMetro\TargetExchanger.cs" />
+     <Compile Include="Assets\_Scripts\_StageMetro\seatmanController.cs" />
      <Compile Include="Assets\_Scripts\_StageSelect\ButtonCaller.cs" />
      <Compile Include="Assets\_Scripts\_StageSelect\StageSelect.cs" />
      <None Include="Assets\Simple Particle Ribbon sample\readme_Simple_Particle_Ribbon.txt" />

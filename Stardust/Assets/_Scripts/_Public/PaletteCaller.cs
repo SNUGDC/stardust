@@ -10,7 +10,6 @@ public class PaletteCaller : MonoBehaviour {
 	Vector3[] tempPos;
 	Vector3[] temp;
 	int routine = 0;
-	private bool wasMouseDown;
 	public bool active = false;
 	public float smoothTime = 0.18f;
 
@@ -77,4 +76,5 @@ public class PaletteCaller : MonoBehaviour {
 			Palettes[i].transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		}
 	}
+
 }
