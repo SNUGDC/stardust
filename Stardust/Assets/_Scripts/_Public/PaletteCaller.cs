@@ -4,7 +4,7 @@ using System.Collections;
 public class PaletteCaller : MonoBehaviour {
 
 
-	public string Palettetag;
+	public string PaletteTag;
 
 	GameObject[] Palettes;
 	Vector3[] tempPos;
@@ -15,35 +15,30 @@ public class PaletteCaller : MonoBehaviour {
 
 	private Vector3[] velocity;
 
-	void Start () {
-	
-		Palettes = GameObject.FindGameObjectsWithTag (Palettetag);
+	public enum eState
+	{
+		None,
 
-		tempPos = new Vector3[Palettes.GetLength(0)];
-		temp = new Vector3[Palettes.GetLength (0)];
-		velocity = new Vector3[Palettes.GetLength (0)];
-		for (int i = 0; i < Palettes.GetLength (0); i++) 
-		{
-			tempPos[i] = Palettes[i].transform.position;
-			Palettes [i].SetActive (false);
-		}
+		Contact
 	}
 
-	void Update () 
-	{
+	eState mushroomState;
 
-		if (Input.GetMouseButtonDown(0))
+	void OnCollisionEnter2D(Collision2D coll)
+	{
+		if (coll.gameObject.tag == "Player") 
 		{
-			if (active == true) 
-			{
-				routine = 1;
-			}
-			else 
-			{
-				routine = 2;
-			}
-			active = false;
-		}
+			mushroomState = eState.Contact;
+		} 
+	}
+
+	void OnCollisionExit2D(Collision2D coll)
+	{
+		mushroomState = eState.None;
+	}
+	void Update()
+	{
+		Touch ();
 		if (routine == 1) 
 		{
 			PaletteCall ();
@@ -57,18 +52,7 @@ public class PaletteCaller : MonoBehaviour {
 			}
 		}
 	}
-
-	void PaletteCall ()
-	{
-		for (int i = 0; i<Palettes.GetLength(0); i++) 
-		{
-			Palettes [i].SetActive (true);
-			temp[i] = Vector3.SmoothDamp(Palettes[i].transform.position, tempPos[i], ref velocity[i], smoothTime);
-			Palettes[i].transform.position = temp[i];
-		}
-	}
-
-	void OnMouseDown()
+	void OnMouseDown()//change start position of Palette
 	{
 		active = true;
 		for (int i = 0; i < Palettes.GetLength(0); i++) 
@@ -77,4 +61,42 @@ public class PaletteCaller : MonoBehaviour {
 		}
 	}
 
+	void Touch()
+	{
+		if (mushroomState == eState.Contact && Input.GetMouseButtonDown(0)) 
+		{
+			if (active == true) 
+			{
+				routine = 1;
+			}
+			else 
+			{
+				routine = 2;
+			}
+			active = false;
+		}
+	}
+
+	void Start () {
+
+		Palettes = GameObject.FindGameObjectsWithTag (PaletteTag);
+
+		tempPos = new Vector3[Palettes.GetLength(0)];
+		temp = new Vector3[Palettes.GetLength (0)];
+		velocity = new Vector3[Palettes.GetLength (0)];
+		for (int i = 0; i < Palettes.GetLength (0); i++) 
+		{
+			tempPos[i] = Palettes[i].transform.position;
+			Palettes [i].SetActive (false);
+		}
+	}
+
+	void PaletteCall ()
+	{
+		for (int i = 0; i < Palettes.GetLength (0); i++) {
+			Palettes [i].SetActive (true);
+			temp [i] = Vector3.SmoothDamp (Palettes [i].transform.position, tempPos [i], ref velocity [i], smoothTime);
+			Palettes [i].transform.position = temp [i];
+		}
+	}
 }
