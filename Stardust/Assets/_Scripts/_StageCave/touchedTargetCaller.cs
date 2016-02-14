@@ -50,7 +50,6 @@ public class touchedTargetCaller : MonoBehaviour {
 		if (routine == 2) 
 		{	
 			Target.SetActive (false);
-
 		}
 	}
 	void OnMouseDown()//change start position of Palette

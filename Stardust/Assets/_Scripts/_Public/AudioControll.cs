@@ -21,7 +21,7 @@ public class AudioControll : MonoBehaviour {
         {
             instance = this;
         }
-        DontDestroyOnLoad(this.gameObject);
+		//DontDestroyOnLoad(this.gameObject);
     }
     void Update()
     {

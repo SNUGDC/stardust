@@ -8,18 +8,13 @@ public class CrystalCaller : MonoBehaviour {
 
 	public int ClickCount = 0;//check the click count of palette
 
-	//public string PaletteTag;
 
-	/*
-	void Start()
-	{
-		paletteClass = GameObject.FindGameObjectsWithTag (PaletteTag);
-	}
-	*/
+
 
 	void OnMouseDown()
 	{	
 		ClickCount = 1;
+
 		if(paletteClass[0].GetComponent<CrystalCaller>().ClickCount == 1 && paletteClass[1].GetComponent<CrystalCaller>().ClickCount == 0 && paletteClass[2].GetComponent<CrystalCaller>().ClickCount == 0) 
 		{
 			CrystalClass [0].SetActive (true);
@@ -32,6 +27,7 @@ public class CrystalCaller : MonoBehaviour {
 				paletteClass [0].GetComponent<CrystalCaller> ().ClickCount = 0;
 				paletteClass [1].GetComponent<CrystalCaller> ().ClickCount = 0;
 				paletteClass [2].GetComponent<CrystalCaller> ().ClickCount = 0;
+				paletteClass [3].GetComponent<CrystalCaller> ().ClickCount = 0;
 			}
 		}
 		if(paletteClass[1].GetComponent<CrystalCaller>().ClickCount == 1 && paletteClass[0].GetComponent<CrystalCaller>().ClickCount == 0 && paletteClass[2].GetComponent<CrystalCaller>().ClickCount == 0) 
@@ -45,6 +41,7 @@ public class CrystalCaller : MonoBehaviour {
 				paletteClass [0].GetComponent<CrystalCaller> ().ClickCount = 0;
 				paletteClass [1].GetComponent<CrystalCaller> ().ClickCount = 0;
 				paletteClass [2].GetComponent<CrystalCaller> ().ClickCount = 0;
+				paletteClass [3].GetComponent<CrystalCaller> ().ClickCount = 0;
 			}
 		}
 		if (paletteClass [2].GetComponent<CrystalCaller> ().ClickCount == 1 && paletteClass [0].GetComponent<CrystalCaller> ().ClickCount == 0 && paletteClass [1].GetComponent<CrystalCaller> ().ClickCount == 0) {
@@ -57,6 +54,7 @@ public class CrystalCaller : MonoBehaviour {
 				paletteClass [0].GetComponent<CrystalCaller> ().ClickCount = 0;
 				paletteClass [1].GetComponent<CrystalCaller> ().ClickCount = 0;
 				paletteClass [2].GetComponent<CrystalCaller> ().ClickCount = 0;
+				paletteClass [3].GetComponent<CrystalCaller> ().ClickCount = 0;
 			}
 		} else if (paletteClass [0].GetComponent<CrystalCaller> ().ClickCount == 1 && paletteClass [1].GetComponent<CrystalCaller> ().ClickCount == 1 && paletteClass [2].GetComponent<CrystalCaller> ().ClickCount == 0) {
 			CrystalClass [3].SetActive (true);
@@ -68,6 +66,7 @@ public class CrystalCaller : MonoBehaviour {
 				paletteClass [0].GetComponent<CrystalCaller> ().ClickCount = 0;
 				paletteClass [1].GetComponent<CrystalCaller> ().ClickCount = 0;
 				paletteClass [2].GetComponent<CrystalCaller> ().ClickCount = 0;
+				paletteClass [3].GetComponent<CrystalCaller> ().ClickCount = 0;
 			}
 
 		} else if (paletteClass [0].GetComponent<CrystalCaller> ().ClickCount == 1 && paletteClass [2].GetComponent<CrystalCaller> ().ClickCount == 1 && paletteClass [1].GetComponent<CrystalCaller> ().ClickCount == 0) {
@@ -80,6 +79,7 @@ public class CrystalCaller : MonoBehaviour {
 				paletteClass [0].GetComponent<CrystalCaller> ().ClickCount = 0;
 				paletteClass [1].GetComponent<CrystalCaller> ().ClickCount = 0;
 				paletteClass [2].GetComponent<CrystalCaller> ().ClickCount = 0;
+				paletteClass [3].GetComponent<CrystalCaller> ().ClickCount = 0;
 			}
 		} else if (paletteClass [1].GetComponent<CrystalCaller> ().ClickCount == 1 && paletteClass [2].GetComponent<CrystalCaller> ().ClickCount == 1 && paletteClass [0].GetComponent<CrystalCaller> ().ClickCount == 0) {
 			CrystalClass [5].SetActive (true);
@@ -91,20 +91,24 @@ public class CrystalCaller : MonoBehaviour {
 				paletteClass [0].GetComponent<CrystalCaller> ().ClickCount = 0;
 				paletteClass [1].GetComponent<CrystalCaller> ().ClickCount = 0;
 				paletteClass [2].GetComponent<CrystalCaller> ().ClickCount = 0;
+				paletteClass [3].GetComponent<CrystalCaller> ().ClickCount = 0;
 			}
 		} else if (paletteClass [0].GetComponent<CrystalCaller> ().ClickCount == 1 && paletteClass [1].GetComponent<CrystalCaller> ().ClickCount == 1 && paletteClass [2].GetComponent<CrystalCaller> ().ClickCount == 1) {
 			CrystalClass [6].SetActive (true);
+
 			for (int i = 0; i < 6; i++) {
 				CrystalClass [i].SetActive (false);
 			}
-			if (paletteClass [3].GetComponent<CrystalCaller> ().ClickCount == 1) 
-			{
+
+			if (paletteClass [3].GetComponent<CrystalCaller> ().ClickCount == 1) {
 				CrystalClass [6].SetActive (false);
 				CrystalClass [7].SetActive (true);
 				paletteClass [0].GetComponent<CrystalCaller> ().ClickCount = 0;
 				paletteClass [1].GetComponent<CrystalCaller> ().ClickCount = 0;
 				paletteClass [2].GetComponent<CrystalCaller> ().ClickCount = 0;
+				paletteClass [3].GetComponent<CrystalCaller> ().ClickCount = 0;
 			}
+
 		}
 
 		GetComponentInParent<PaletteCaller> ().active = false;

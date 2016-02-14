@@ -47,20 +47,22 @@
   <ItemGroup>
      <Compile Include="Assets\Simple Particle Ribbon sample\Scripts\ReverseNormals.cs" />
      <Compile Include="Assets\_Scripts\_MainMenu\MainMenu.cs" />
+     <Compile Include="Assets\_Scripts\_Public\AudioControll.cs" />
      <Compile Include="Assets\_Scripts\_Public\CameraController.cs" />
-     <Compile Include="Assets\_Scripts\_Public\ParentColliderDestroyer.cs" />
      <Compile Include="Assets\_Scripts\_Public\ParticleCaller.cs" />
-     <Compile Include="Assets\_Scripts\_Public\PlayerController.cs" />
      <Compile Include="Assets\_Scripts\_Public\TargetCaller.cs" />
-     <Compile Include="Assets\_Scripts\_Public\touchedPaletteCaller.cs" />
-     <Compile Include="Assets\_Scripts\_SettingMenu\AudioControll.cs" />
      <Compile Include="Assets\_Scripts\_SettingMenu\SettingMenu.cs" />
      <Compile Include="Assets\_Scripts\_StageCave\CrystalCaller.cs" />
      <Compile Include="Assets\_Scripts\_StageCave\JongyusukCaller.cs" />
      <Compile Include="Assets\_Scripts\_StageCave\MushroomCaller.cs" />
      <Compile Include="Assets\_Scripts\_StageCave\PaletteCaller.cs" />
+     <Compile Include="Assets\_Scripts\_StageCave\PaperCaller.cs" />
+     <Compile Include="Assets\_Scripts\_StageCave\ParentColliderDestroyer.cs" />
+     <Compile Include="Assets\_Scripts\_StageCave\PlayerController.cs" />
+     <Compile Include="Assets\_Scripts\_StageCave\TargetExchanger.cs" />
      <Compile Include="Assets\_Scripts\_StageCave\scaleLarger.cs" />
      <Compile Include="Assets\_Scripts\_StageCave\scaleSmaller.cs" />
+     <Compile Include="Assets\_Scripts\_StageCave\touchedPaletteCaller.cs" />
      <Compile Include="Assets\_Scripts\_StageCave\touchedTargetCaller.cs" />
      <Compile Include="Assets\_Scripts\_StageMetro\ColliderControll.cs" />
      <Compile Include="Assets\_Scripts\_StageMetro\CombinationCaller.cs" />
@@ -70,7 +72,6 @@
      <Compile Include="Assets\_Scripts\_StageMetro\GundalCollider.cs" />
      <Compile Include="Assets\_Scripts\_StageMetro\GundalControll.cs" />
      <Compile Include="Assets\_Scripts\_StageMetro\ObjectCollector.cs" />
-     <Compile Include="Assets\_Scripts\_StageMetro\TargetExchanger.cs" />
      <Compile Include="Assets\_Scripts\_StageMetro\seatmanController.cs" />
      <Compile Include="Assets\_Scripts\_StageSelect\ButtonCaller.cs" />
      <Compile Include="Assets\_Scripts\_StageSelect\StageSelect.cs" />

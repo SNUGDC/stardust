@@ -18,13 +18,13 @@ public class scaleLarger: MonoBehaviour {
 				Target.GetComponent<Transform> ().localScale += new Vector3 (0.25f, 0.25f, 0);
 				scaled = true;
 				Destroy (Parent.GetComponent<Collider2D> ());
+				Destroy (this.GetComponent<Collider2D> ());
 			} else {
 				this.gameObject.SetActive (false);
 			}
 		} 
-
-	
 	}
+
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.tag == "Player") {
