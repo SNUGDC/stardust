@@ -1,12 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/_StageCave/MushroomCaller.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/_Public/PlayerController.cs">
     <Files>
-      <File FileName="Assets/_Scripts/_StageCave/MushroomCaller.cs" Line="40" Column="3" />
-      <File FileName="Assets/_Scripts/_StageMetro/CombinationCaller.cs" Line="1" Column="1" />
-      <File FileName="Assets/_Scripts/_Public/PlayerController.cs" Line="1" Column="1" />
-      <File FileName="Assets/_Scripts/_StageCave/scaleLarger.cs" Line="30" Column="50" />
-      <File FileName="Assets/_Scripts/_StageCave/scaleSmaller.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Scripts/_StageCave/PaletteCaller.cs" Line="53" Column="19" />
+      <File FileName="Assets/_Scripts/_StageCave/CrystalCaller.cs" Line="101" Column="4" />
+      <File FileName="Assets/_Scripts/_StageCave/touchedTargetCaller.cs" Line="7" Column="18" />
+      <File FileName="Assets/_Scripts/_Public/PlayerController.cs" Line="21" Column="4" />
+      <File FileName="Assets/_Scripts/_StageCave/scaleSmaller.cs" Line="28" Column="83" />
+      <File FileName="Assets/_Scripts/_StageCave/scaleLarger.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -47,7 +47,7 @@ public class CombinationCaller : MonoBehaviour {
 			TaegukObject.SetActive(true);
 		}
 
-		GetComponentInParent<PaletteCaller> ().active = false;//Palette erase
+		GetComponentInParent<touchedPaletteCaller> ().active = false;//Palette erase
 	}
 
 

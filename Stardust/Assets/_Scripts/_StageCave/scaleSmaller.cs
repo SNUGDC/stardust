@@ -3,7 +3,7 @@ using System.Collections;
 
 public class scaleSmaller: MonoBehaviour {
 
-	Vector3 defaultScale = new Vector3(2, 2, 1);
+	//Vector3 defaultScale = new Vector3(2, 2, 1);
 	public Vector3 newScale = new Vector3(0.75f, 0.75f,1);
 	public bool scaled = false;
 	public bool triggerWork = false;

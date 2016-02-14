@@ -43,7 +43,7 @@ public class MushroomCaller : MonoBehaviour {
 			mushroomClass [0].SetActive (false);
 			mushroomClass [1].SetActive (false);
 		}
-		GetComponentInParent<PaletteCaller> ().active = false;
+		GetComponentInParent<touchedPaletteCaller> ().active = false;
 
 	}
 }

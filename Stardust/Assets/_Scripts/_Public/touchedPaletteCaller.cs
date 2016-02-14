@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PaletteCaller : MonoBehaviour {
+public class touchedPaletteCaller : MonoBehaviour {
 
 
 	public string PaletteTag;

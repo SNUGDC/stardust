@@ -3,24 +3,14 @@ using System.Collections;
 
 public class scaleLarger: MonoBehaviour {
 
-	Vector3 defaultScale = new Vector3(0.75f, 0.75f,1);
+	//Vector3 defaultScale = new Vector3(0.75f, 0.75f,1);
 	public Vector3 newScale = new Vector3(2,2,1);
 	public bool scaled = false;
-	public bool triggerWork = false;
+	public bool triggerWork;
 
 	public GameObject Target;
 	public GameObject Parent;
-	/*
-	void Start()
-	{
-		StartCoroutine ("Delay");
-	}
 
-	IEnumerator Delay()//why dont work?
-	{
-		yield return new WaitForSeconds(5f);
-	}
-	*/
 	void Update()
 	{
 		if (triggerWork == true) {
@@ -29,17 +19,9 @@ public class scaleLarger: MonoBehaviour {
 				scaled = true;
 				Destroy (Parent.GetComponent<Collider2D> ());
 			} else {
-				triggerWork = false;
 				this.gameObject.SetActive (false);
 			}
 		} 
-		/*
-		else
-		{
-			Target.GetComponent<Transform> ().localScale = defaultScale;
-			scaled = false;
-		}
-		*/
 
 	
 	}

@@ -13,7 +13,7 @@ public class TargetCaller: MonoBehaviour {
 	void Start()
 	{
 		targetTag = Target.gameObject.tag;
-		//targetClass = GameObject.FindGameObjectsWithTag (targetTag);
+		targetClass = GameObject.FindGameObjectsWithTag (targetTag);
 	}
 
 	void Update()
@@ -28,7 +28,7 @@ public class TargetCaller: MonoBehaviour {
 			target.SetActive (false);
 		}
 		Target.SetActive (true);
-		GetComponentInParent<PaletteCaller> ().active = false;//Palette erase
+		GetComponentInParent<touchedPaletteCaller> ().active = false;//Palette erase
 	}
 }
 
