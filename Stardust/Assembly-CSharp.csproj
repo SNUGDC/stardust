@@ -52,7 +52,10 @@
      <Compile Include="Assets\_Scripts\_Public\ParticleCaller.cs" />
      <Compile Include="Assets\_Scripts\_Public\TargetCaller.cs" />
      <Compile Include="Assets\_Scripts\_SettingMenu\SettingMenu.cs" />
+     <Compile Include="Assets\_Scripts\_StageCave\CorrectChooser.cs" />
      <Compile Include="Assets\_Scripts\_StageCave\CrystalCaller.cs" />
+     <Compile Include="Assets\_Scripts\_StageCave\DestroyTargetCollider.cs" />
+     <Compile Include="Assets\_Scripts\_StageCave\DoorOpener.cs" />
      <Compile Include="Assets\_Scripts\_StageCave\JongyusukCaller.cs" />
      <Compile Include="Assets\_Scripts\_StageCave\MushroomCaller.cs" />
      <Compile Include="Assets\_Scripts\_StageCave\PaletteCaller.cs" />
