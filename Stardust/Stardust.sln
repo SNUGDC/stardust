@@ -1,7 +1,7 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{154210B1-9B5B-63E6-CA61-45FE99179045}") = "Stardust", "Assembly-CSharp.csproj", "{35842221-A901-EE91-74CE-942E9B4A1099}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stardust.CSharp", "Stardust.CSharp.csproj", "{1CC6B403-20E6-AB89-722F-A3A05D1B63F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{35842221-A901-EE91-74CE-942E9B4A1099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{35842221-A901-EE91-74CE-942E9B4A1099}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{35842221-A901-EE91-74CE-942E9B4A1099}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{35842221-A901-EE91-74CE-942E9B4A1099}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CC6B403-20E6-AB89-722F-A3A05D1B63F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CC6B403-20E6-AB89-722F-A3A05D1B63F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CC6B403-20E6-AB89-722F-A3A05D1B63F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CC6B403-20E6-AB89-722F-A3A05D1B63F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
