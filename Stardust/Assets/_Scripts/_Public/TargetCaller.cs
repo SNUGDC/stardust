@@ -1,19 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TargetCaller: MonoBehaviour {
-
+public class TargetCaller : MonoBehaviour {
 
 	public GameObject Target;
 
-	GameObject[] targetClass; 
+	GameObject[] targetClass;
+
 
 	string targetTag;
+
+	//string combiTag;
 
 	void Start()
 	{
 		targetTag = Target.gameObject.tag;
-		targetClass = GameObject.FindGameObjectsWithTag (targetTag);
+
 	}
 
 	void Update()
@@ -21,20 +23,19 @@ public class TargetCaller: MonoBehaviour {
 		targetClass = GameObject.FindGameObjectsWithTag (targetTag);
 	}
 
+
 	void OnMouseDown()
 	{
-		foreach (GameObject target in targetClass) 
+		
+		foreach (GameObject target in targetClass) // all target of palette will be setActive(false)
 		{
 			target.SetActive (false);
 		}
-		Target.SetActive (true);
-		GetComponentInParent<touchedPaletteCaller> ().active = false;//Palette erase
+
+		Target.SetActive (true);//when we click button target of palette will be SetActive(true)
 	}
+
+
 }
-
-
-
-
-
 
 

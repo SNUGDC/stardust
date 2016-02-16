@@ -3,8 +3,6 @@ using System.Collections;
 
 public class PaletteCaller : MonoBehaviour
 {
-
-
 	public string Palettetag;
 
 	GameObject[] Palettes;
@@ -73,7 +71,10 @@ public class PaletteCaller : MonoBehaviour
 
 	void OnMouseDown()
 	{
-		active = true;
+		if (this.GetComponent<PaletteCaller> ().enabled) 
+		{
+			active = true;
+		}
 		for (int i = 0; i < Palettes.GetLength(0); i++)
 		{
 			Palettes[i].transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
