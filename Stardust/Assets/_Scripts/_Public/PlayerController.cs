@@ -15,9 +15,11 @@ public class PlayerController : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		if (Input.GetMouseButton(0)) 
-		{
+		if (Input.GetMouseButton (0)) {
 			MovePlayer ();
+		} else if (Input.GetMouseButtonUp (0)) 
+		{
+			rb.velocity = new Vector2 (0, 0);
 		}
 	}
 	void MovePlayer()
