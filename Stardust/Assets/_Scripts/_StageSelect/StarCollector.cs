@@ -4,7 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class StarCollector : MonoBehaviour {
 
-	public GameObject[] Stars;
+	public static string SceneName;
+	public static int CaveStar;
+	public static int ForestStar;
+	public static int MetroStar;
+	public static int AliceStar;
+	public static int AmusementStar;
 	private static StarCollector star_instance;
 	private int starCount;
 
@@ -29,18 +34,8 @@ public class StarCollector : MonoBehaviour {
 
 	void Update()
 	{
-		Stars = GameObject.FindGameObjectsWithTag ("Star") as GameObject[];
-		starCount = Stars.GetLength (0);
-		if (SceneManager.GetSceneByName("StageCave")) 
-		{
-			
-		} else if (SceneManager.GetSceneByName ("StageForest")) {
-			
-		} else if (SceneManager.GetSceneByName ("StageMetro")) 
-		{
-			
-		}
-
+		
 	}
+
 
 }
