@@ -33,6 +33,8 @@ public class SkyCaller : MonoBehaviour {
 		}
 
 		Target.SetActive (true);//when we click button target of palette will be SetActive(true)
+
+		Target.GetComponent<PositionSet> ().MovePlanet ();
 		this.gameObject.SetActive(false);
 	}
 

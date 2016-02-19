@@ -15,28 +15,34 @@ public class PositionSet : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D> ();
 
 	}
-	void FixedUpdate() 
+
+	void OnEnable()
+	{
+		player = GameObject.FindGameObjectWithTag ("Player");
+		rb = GetComponent<Rigidbody2D> ();
+
+	}
+
+	void Update() 
 	{	
 		MovePlanet (); 
 
 	}
 
-	void MovePlanet()
+	public void MovePlanet()
 	{
 		float playerPositionX = player.transform.position.x;
 
 
-		if (Input.mousePosition.x >= (2 * Screen.width / 3) && player.GetComponent<PlayerController>().facingRight == true)
+		if (player.GetComponent<PlayerController>().facingRight == true)
 		{
 			rb.transform.position = new Vector2 (playerPositionX + addPositionX, addPositionY);
 
 		}
 
-		if (Input.mousePosition.x < (Screen.width / 3) && player.GetComponent<PlayerController>().facingRight == false) 
+		if (player.GetComponent<PlayerController>().facingRight == false) 
 		{
 			rb.transform.position = new Vector2 ( playerPositionX + addPositionX, addPositionY);
 		}
 	}
-
-
 }

@@ -25,20 +25,19 @@ public class PlayerController : MonoBehaviour {
 	void MovePlayer()
 	{
 		float touchPositionX = Input.mousePosition.x;
-
-		Vector2 touchVector = new Vector2 (touchPositionX / Mathf.Abs(touchPositionX), 0);
+		Debug.Log (touchPositionX);
 
 		if (Input.mousePosition.x >= (2 * Screen.width / 3) && facingRight)
 		{
-			rb.velocity = touchVector * Speed * Time.deltaTime;
+			rb.velocity = new Vector2 (1,0)* Speed * Time.deltaTime;
 
 		}
 
-		if (Input.mousePosition.x < (Screen.width / 3) && !facingRight) 
+		else if (Input.mousePosition.x < (Screen.width / 3) && !facingRight) 
 		{
-			rb.velocity = -touchVector * Speed * Time.deltaTime;	
+			rb.velocity = new Vector2 (-1, 0)* Speed * Time.deltaTime;	
 		}
-		if (Input.mousePosition.x < (2 * Screen.width / 3) &&Input.mousePosition.x >= (Screen.width / 3)) 
+		else if (Input.mousePosition.x < (2 * Screen.width / 3) &&Input.mousePosition.x >= (Screen.width / 3)) 
 		{
 			rb.velocity = Vector2.zero * Speed * Time.deltaTime;
 		}
