@@ -12,13 +12,12 @@ public class PositionSet : MonoBehaviour {
 	void Start ()
 	{
 		player = GameObject.FindGameObjectWithTag ("Player");
-		Debug.Log ("player found");
 		rb = GetComponent<Rigidbody2D> ();
 
 	}
-	void Update()
+	void FixedUpdate() 
 	{	
-		MovePlanet ();
+		MovePlanet (); 
 
 	}
 

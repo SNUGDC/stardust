@@ -4,11 +4,14 @@ using System.Collections;
 public class ActiveSelfByTargetforStageClear : MonoBehaviour {
 
 	public GameObject[] Target;
-	public GameObject Root;
+	public GameObject[] RootClass;
 
 	// Use this for initialization
 	void Start () {
-	
+		for (int i = 0; i < 2; i++) 
+		{
+			RootClass [i].gameObject.SetActive (false);
+		}
 	}
 	
 	// Update is called once per frame
@@ -16,11 +19,17 @@ public class ActiveSelfByTargetforStageClear : MonoBehaviour {
 
 		if (Target[0].activeInHierarchy == true && Target[1].activeInHierarchy == true) {
 			//Debug.Log ("Work Well");
-			Root.gameObject.SetActive (true);
+			for (int i = 0; i < 2; i++) 
+			{
+				RootClass [i].gameObject.SetActive (true);
+			}
 		} 
 		else 
 		{
-			this.gameObject.SetActive (false);
+			for (int i = 0; i < 2; i++) 
+			{
+				RootClass [i].gameObject.SetActive (false);
+			}
 		}
 	
 	}
