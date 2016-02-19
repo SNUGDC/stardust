@@ -4,7 +4,7 @@ using System.Collections;
 public class WolfState : MonoBehaviour {
 
 	private bool getHat;
-	private bool rained;
+	private bool rainedHat;
 	public GameObject[] WolfFeeling;
 	public GameObject[] OwlWithoutHat;
 	public GameObject RainFlower;
@@ -29,11 +29,11 @@ public class WolfState : MonoBehaviour {
 		{
 			getHat = false;
 		}
-		if (RainFlower.activeInHierarchy == true) {
-			rained = true;
-		} else if (RainFlower.activeInHierarchy == false) 
+		if (getHat == true && RainFlower.activeInHierarchy == true) {
+			rainedHat = true;
+		} else
 		{
-			rained = false;
+			rainedHat = false;
 		}
 	}
 
@@ -41,7 +41,7 @@ public class WolfState : MonoBehaviour {
 	{
 		if (other.tag == "Player") 
 		{
-			if (rained == true && getHat == true) {
+			if (rainedHat == true ) {
 				WolfFeeling [0].SetActive(false);
 				WolfFeeling [1].SetActive(true);
 			} else 

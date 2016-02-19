@@ -10,26 +10,30 @@ public class ArrowSet : MonoBehaviour {
 	public float addPositionX;
 	public float addPositionY;
 	private bool active = false;
-	//private int routine = 0;
+	private int routine = 0;
 
 	void Start ()
 	{
 		Arrow.gameObject.SetActive (false);
 	}
-	void FixedUpdate()
+	void Update()
 	{
-		if (active == true) {
-			//routine = 1;
-			ArrowPosition ();
-		} 
-		else if(active == false)		
+		if (Input.GetMouseButtonDown (0)) 
 		{
-			//routine = 0;
-			Arrow.gameObject.SetActive (false);	
-		}
-		else if ( Planet.activeInHierarchy == false)
-		{
+			if (active == true) {
+				routine = 1;
+			} 
+			else 
+			{
+				routine = 2;
+			}
+
 			active = false;
+		}
+		if (routine == 1) {
+			ArrowPosition ();
+		} else if (routine == 2) {
+			Arrow.gameObject.SetActive (false);	
 		}
 	}
 

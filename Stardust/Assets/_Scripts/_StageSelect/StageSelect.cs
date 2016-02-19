@@ -3,8 +3,11 @@ using System.Collections;
 
 public class StageSelect : MonoBehaviour {
 
-	public void LoadScene(int level)
+	public int level;
+
+	void OnMouseDown()
 	{
-		Application.LoadLevel(level);
+		UnityEngine.SceneManagement.SceneManager.LoadScene (level);
 	}
 }
+
