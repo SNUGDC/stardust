@@ -8,6 +8,7 @@ public class touchedTargetCaller : MonoBehaviour {
 	Vector3 temp;
 	int routine = 0;
 	public bool active = false;
+    public bool targetActive = false;
 	public float smoothTime = 0.18f;
 
 	private Vector3 velocity;
@@ -21,17 +22,22 @@ public class touchedTargetCaller : MonoBehaviour {
 
 	eState paperState;
 
-	void OnCollisionEnter2D(Collision2D coll)
+	void OnTriggerEnter2D(Collider2D coll)
 	{
-		if (coll.gameObject.tag == "Player") 
+		if (coll.tag == "Player") 
 		{
 			paperState = eState.Contact;
-		} 
+		    active = false;
+		}
 	}
 
-	void OnCollisionExit2D(Collision2D coll)
+	void OnTriggerExit2D(Collider2D coll)
 	{
-		paperState = eState.None;
+	    if (coll.tag == "Player")
+	    {
+	        paperState = eState.None;
+	        Target.SetActive(false);
+	    }
 	}
 
 	void Start () {
@@ -49,7 +55,7 @@ public class touchedTargetCaller : MonoBehaviour {
 
 		if (routine == 2) 
 		{	
-			Target.SetActive (false);
+			//Target.SetActive (false);
 		}
 	}
 	void OnMouseDown()//change start position of Palette
@@ -66,10 +72,11 @@ public class touchedTargetCaller : MonoBehaviour {
 			{
 				routine = 1;
 			}
-			else 
+			else if (active == false && targetActive == false)
 			{
 				routine = 2;
 			}
+		    targetActive = false;
 			active = false;
 		}
 	}

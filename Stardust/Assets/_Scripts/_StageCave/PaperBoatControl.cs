@@ -4,32 +4,55 @@ using System.Collections;
 public class PaperBoatControl : MonoBehaviour {
 
 	private bool active;
+    public bool paletteActive;
 	public GameObject Pond;
+    public string PaperPaletteTag;
+    public GameObject[] PaperPalettes;
+    public GameObject[] Papers;
+    public GameObject Boat;
 
 	// Update is called once per frame
-	void LateUpdate () {
-
+	void Update () {
 		if (Input.GetMouseButtonDown(0))
 		{
-			if (active == true)
+            if(active == false && paletteActive == false)
 			{
-				this.gameObject.SetActive (true);
-
-			}
-			else
-			{
-				GetComponentInParent<touchedTargetCaller> ().enabled = true;
+			    foreach (GameObject palette in PaperPalettes)
+			    {
+			        palette.SetActive(false);
+                    palette.GetComponent<TargetCaller>().Target.SetActive(false);
+			    }
 				this.gameObject.SetActive (false);
-			}
+            }
+		    if (active == false && paletteActive == true)
+		    {
+                foreach (GameObject palette in PaperPalettes)
+                {
+                    palette.SetActive(false);
+                }
+            }
 			active = false;
+		    paletteActive = false;
 		}
-	}
 
-	void OnMouseDown()
-	{
+	    if (Papers[0].activeInHierarchy == true && Papers[3].activeInHierarchy == true)
+	    {
+	        Boat.SetActive(true);
+	        Pond.GetComponent<PolygonCollider2D>().enabled = false;
+            this.gameObject.SetActive(false);
+	    }
+        else if (Papers[1].activeInHierarchy == true && Papers[4].activeInHierarchy == true)
+        {
+            Boat.SetActive(true);
+            Pond.GetComponent<PolygonCollider2D>().enabled = false;
+            this.gameObject.SetActive(false);
+        }
+
+    }
+
+    void OnMouseDown()
+    {
 		active = true;
-		Pond.GetComponent<touchedTargetCaller> ().enabled = false;
-
+	    Pond.GetComponent<touchedTargetCaller>().targetActive = true;
 	}
-
 }
