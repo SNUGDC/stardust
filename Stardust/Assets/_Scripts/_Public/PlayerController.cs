@@ -7,33 +7,25 @@ public class PlayerController : MonoBehaviour {
 	public bool facingRight = true;
 	public float Speed;
 	private Rigidbody2D rb;
-    private Animator girlmoveani;
 
 
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
-	    girlmoveani = GetComponent<Animator>();
 	}
 
 	void FixedUpdate()
 	{
 		if (Input.GetMouseButton (0)) {
 			MovePlayer ();
-            girlmoveani.SetBool("Go", true);
 		} else if (Input.GetMouseButtonUp (0)) 
 		{
 			rb.velocity = new Vector2 (0, 0);
-            girlmoveani.SetBool("Go", false);
-		}
-		else
-		{
-		    girlmoveani.SetBool("Go", false);
-            girlmoveani.SetBool("End", false);
 		}
 	}
 	void MovePlayer()
 	{
 		float touchPositionX = Input.mousePosition.x;
+		Debug.Log (touchPositionX);
 
 		if (Input.mousePosition.x >= (2 * Screen.width / 3) && facingRight)
 		{
