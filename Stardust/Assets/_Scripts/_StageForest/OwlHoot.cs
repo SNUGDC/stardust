@@ -12,6 +12,7 @@ public class OwlHoot : MonoBehaviour {
 	private int colliderCount = 0;
 	public GameObject[] DayClass;
 	public GameObject[] NightClass;
+    public GameObject OwlHat;
 	private bool hatOff = false;
 	// Use this for initialization
 	void Start () {
@@ -62,6 +63,7 @@ public class OwlHoot : MonoBehaviour {
 				WithoutHatSleep.SetActive (false);
 				OwlSleep.SetActive (false);
 				WithoutHatWake.SetActive (true);
+                OwlHat.SetActive(true);
 			}
 
 		}

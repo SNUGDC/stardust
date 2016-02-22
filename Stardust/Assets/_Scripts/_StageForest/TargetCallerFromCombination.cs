@@ -6,8 +6,10 @@ public class TargetCallerFromCombination : MonoBehaviour {
 
 	public GameObject Target;
 	public GameObject Parent;
+    public GameObject Target2;
 
 	public GameObject[] combiClass;// saving palettes in array include myself
+    public GameObject[] combiClass2;//
 
 	//public int CombiCount = 0;
 
@@ -20,7 +22,14 @@ public class TargetCallerFromCombination : MonoBehaviour {
 			Target.SetActive(true);
 			Parent.GetComponent<PaletteCaller> ().enabled = false;
 		}
-		/*
+
+        if (combiClass2[0].activeInHierarchy == true && combiClass2[1].activeInHierarchy) ; //== true && combiClass2[2].activeInHierarchy)
+        {
+            Debug.Log("YellowFlower");
+            Target.GetComponent<SpriteRenderer>();
+            Parent.GetComponent<PaletteCaller>().enabled = false;
+        }
+        /*
 		else if (combiClass[2].activeInHierarchy == true && combiClass[3].activeInHierarchy == true ) 
 		{
 			Debug.Log ("Blue");
@@ -28,8 +37,8 @@ public class TargetCallerFromCombination : MonoBehaviour {
 			//CombiCount = 0;
 		}
 		*/
-		//GetComponentInParent<touchedPaletteCaller> ().active = false;//Palette erase
-	}
+        //GetComponentInParent<touchedPaletteCaller> ().active = false;//Palette erase
+    }
 }
 
 
