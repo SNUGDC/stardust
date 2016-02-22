@@ -4,9 +4,9 @@ using System.Collections;
 public class TargetCaller : MonoBehaviour {
 
 	public GameObject Target;
-    public Animator HatturningAni;
+    //public Animator HatturningAni;
 
-	GameObject[] targetClass;
+	GameObject [] targetClass;
 
 	  
 	string targetTag;
