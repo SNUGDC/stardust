@@ -28,24 +28,40 @@ TagManager:
   - SunPalette
   - SkyPalette
   - Planet
-  - LineColor
-  - Passengers
-  - LinePalette
-  - Crowd
-  - Aircontainer
-  - AirMark
-  - SeatPalette
-  - AircontainerPalette
-  - GrandmaObjects
-  - GrandpaPalette
-  - GrandmaPalette
-  - Grandpa
-  - CrowdPalette
-  - PinkSeat
-  - Particles
-  - AirMarkPalette
   - Paper1
   - Paper2
+  - CatLeftPalette
+  - CatRightPalette
+  - CatLeft
+  - CatRight
+  - ElephantPalette
+  - Elephant
+  - ChatshirePalette
+  - Chatshire
+  - SkyColor
+  - AlpacaPalette
+  - AlpacaRabbit
+  - OctopusPaletteP1
+  - OctopusPaletteP2
+  - OctopusPaletteP3
+  - OctopusP1
+  - OctopusP2
+  - OctopusP3
+  - ButterflyPaletteP1
+  - ButterflyPaletteP2
+  - ButterflyPaletteP3
+  - GiraffePaletteP1
+  - GiraffePaletteP2
+  - GiraffePaletteP3
+  - GiraffePaletteP4
+  - GiraffeP1
+  - GiraffeP2
+  - GiraffeP3
+  - GiraffeP4
+  - ButterflyP3
+  - ButterflyP2
+  - ButterflyP1
+  - TallPalette
   layers:
   - Default
   - TransparentFX
