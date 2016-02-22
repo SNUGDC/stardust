@@ -13,7 +13,6 @@ public class TutorialQuestOne : MonoBehaviour
     private int clickCount;
     private GameObject[] arrows;
 
-
     private void Start()
     {
 
@@ -29,9 +28,6 @@ public class TutorialQuestOne : MonoBehaviour
         {
             item.GetComponentInChildren<CanvasGroup>().alpha = 0;
         }
-
-
-
     }
 
     private void OnTriggerEnter2D(Collider2D other)

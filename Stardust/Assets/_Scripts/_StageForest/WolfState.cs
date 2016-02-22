@@ -8,6 +8,7 @@ public class WolfState : MonoBehaviour {
 	public GameObject[] WolfFeeling;
 	public GameObject[] OwlWithoutHat;
 	public GameObject RainFlower;
+    public GameObject Hat;
 
 	// Use this for initialization
 	void Start () {
@@ -44,7 +45,9 @@ public class WolfState : MonoBehaviour {
 			if (rainedHat == true ) {
 				WolfFeeling [0].SetActive(false);
 				WolfFeeling [1].SetActive(true);
-			} else 
+                Hat.SetActive(false);
+                Destroy(Hat);
+            } else 
 			{
 				WolfFeeling [0].SetActive(true);
 				WolfFeeling [1].SetActive(false);

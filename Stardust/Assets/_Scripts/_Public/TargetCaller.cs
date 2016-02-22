@@ -4,6 +4,7 @@ using System.Collections;
 public class TargetCaller : MonoBehaviour {
 
 	public GameObject Target;
+    public Animator HatturningAni;
 
 	GameObject[] targetClass;
 
@@ -33,6 +34,7 @@ public class TargetCaller : MonoBehaviour {
 		}
 
 		Target.SetActive (true);//when we click button target of palette will be SetActive(true)
+        HatturningAni.SetBool("Hathold", true);
 	}
 
 
