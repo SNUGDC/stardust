@@ -25,7 +25,6 @@ public class PlayerController : MonoBehaviour {
 	void MovePlayer()
 	{
 		float touchPositionX = Input.mousePosition.x;
-		Debug.Log (touchPositionX);
 
 		if (Input.mousePosition.x >= (2 * Screen.width / 3) && facingRight)
 		{
