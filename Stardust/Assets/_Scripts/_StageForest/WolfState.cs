@@ -46,7 +46,7 @@ public class WolfState : MonoBehaviour {
 				WolfFeeling [0].SetActive(false);
 				WolfFeeling [1].SetActive(true);
                 Hat.SetActive(false);
-                Destroy(Hat);
+//                Destroy(Hat);
             } else 
 			{
 				WolfFeeling [0].SetActive(true);
