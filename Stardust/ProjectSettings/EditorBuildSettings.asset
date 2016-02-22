@@ -17,5 +17,7 @@ EditorBuildSettings:
     path: Assets/_Scene/StageCave.unity
   - enabled: 1
     path: Assets/_Scene/StageForest.unity
+  - enabled: 1
+    path: Assets/_Scene/StageAlice.unity
   - enabled: 0
     path: Assets/_Scene/StageMetro.unity

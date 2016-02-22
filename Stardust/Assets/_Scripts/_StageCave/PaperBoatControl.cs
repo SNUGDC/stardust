@@ -6,7 +6,7 @@ public class PaperBoatControl : MonoBehaviour {
 	private bool active;
     public bool paletteActive;
 	public GameObject Pond;
-    public string PaperPaletteTag;
+//    public string PaperPaletteTag;
     public GameObject[] PaperPalettes;
     public GameObject[] Papers;
     public GameObject Boat;
