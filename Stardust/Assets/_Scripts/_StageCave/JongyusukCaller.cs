@@ -6,6 +6,7 @@ public class JongyusukCaller : MonoBehaviour {
 
 	public GameObject[] JongYusukClass;//saving jongyusuk in array
 	GameObject[] paletteClass;// saving palettes in array
+    public Animator BeargetmeatAni;
 
 	public int ClickCount = 0;//check the click count of palette
 
@@ -31,6 +32,7 @@ public class JongyusukCaller : MonoBehaviour {
 			JongYusukClass[2].SetActive (false);
 		} else if (paletteClass[2].GetComponent<JongyusukCaller> ().ClickCount == 1) {
 			JongYusukClass[2].SetActive (true);
+            BeargetmeatAni.SetBool("bearmoving", true);
 			paletteClass [2].GetComponent<JongyusukCaller> ().ClickCount = 0;
 			JongYusukClass[0].SetActive (false);
 			JongYusukClass[1].SetActive (false);
