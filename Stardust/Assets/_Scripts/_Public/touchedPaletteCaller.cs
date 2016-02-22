@@ -22,7 +22,7 @@ public class touchedPaletteCaller : MonoBehaviour {
 		Contact
 	}
 
-	eState mushroomState;
+	public eState mushroomState;
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{
