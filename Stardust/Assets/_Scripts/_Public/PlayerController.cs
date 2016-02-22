@@ -7,20 +7,29 @@ public class PlayerController : MonoBehaviour {
 	public bool facingRight = true;
 	public float Speed;
 	private Rigidbody2D rb;
+    Animator PlayermoveAni;
 
 
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
+        PlayermoveAni = GetComponent<Animator>();
 	}
 
 	void FixedUpdate()
 	{
 		if (Input.GetMouseButton (0)) {
 			MovePlayer ();
-		} else if (Input.GetMouseButtonUp (0)) 
+            PlayermoveAni.SetBool("Go", true);
+		} else if (Input.GetMouseButtonUp (0))
 		{
 			rb.velocity = new Vector2 (0, 0);
+            PlayermoveAni.SetBool("End", true);
+            PlayermoveAni.SetBool("Go", false);
 		}
+        else
+        {
+            PlayermoveAni.SetBool("Go", false);
+        }
 	}
 	void MovePlayer()
 	{
