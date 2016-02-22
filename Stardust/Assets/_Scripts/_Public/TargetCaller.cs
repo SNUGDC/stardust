@@ -34,7 +34,7 @@ public class TargetCaller : MonoBehaviour {
 		}
 
 		Target.SetActive (true);//when we click button target of palette will be SetActive(true)
-        HatturningAni.SetBool("Hathold", true);
+//        HatturningAni.SetBool("Hathold", true);
 	}
 
 

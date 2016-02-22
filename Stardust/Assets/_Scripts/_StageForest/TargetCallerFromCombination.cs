@@ -21,14 +21,7 @@ public class TargetCallerFromCombination : MonoBehaviour {
 			Debug.Log ("Green");
 			Target.SetActive(true);
 			Parent.GetComponent<PaletteCaller> ().enabled = false;
-		}
-
-        if (combiClass2[0].activeInHierarchy == true && combiClass2[1].activeInHierarchy) ; //== true && combiClass2[2].activeInHierarchy)
-        {
-            Debug.Log("YellowFlower");
-            Target.GetComponent<SpriteRenderer>();
-            Parent.GetComponent<PaletteCaller>().enabled = false;
-        }
+		}	
         /*
 		else if (combiClass[2].activeInHierarchy == true && combiClass[3].activeInHierarchy == true ) 
 		{
