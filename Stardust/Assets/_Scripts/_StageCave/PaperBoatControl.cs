@@ -10,6 +10,7 @@ public class PaperBoatControl : MonoBehaviour {
     public GameObject[] PaperPalettes;
     public GameObject[] Papers;
     public GameObject Boat;
+    public GameObject PaperPalette;
 
 	// Update is called once per frame
 	void Update () {
@@ -39,12 +40,14 @@ public class PaperBoatControl : MonoBehaviour {
 	    {
 	        Boat.SetActive(true);
 	        Pond.GetComponent<PolygonCollider2D>().enabled = false;
+            Destroy(PaperPalette);
             this.gameObject.SetActive(false);
 	    }
         else if (Papers[1].activeInHierarchy == true && Papers[4].activeInHierarchy == true)
         {
             Boat.SetActive(true);
             Pond.GetComponent<PolygonCollider2D>().enabled = false;
+            Destroy(PaperPalette);
             this.gameObject.SetActive(false);
         }
 
