@@ -9,6 +9,7 @@ public class Tree : MonoBehaviour
     public GameObject[] Cloud;
     public Collider2D thisCollider;
     public GameObject Pumpkin;
+    public GameObject Star;
 
     private int stage = -1;
 
@@ -42,6 +43,7 @@ public class Tree : MonoBehaviour
 	        Cloud[3].GetComponent<Animator>().SetTrigger("Cloud");
             Destroy(Pumpkin);
             Destroy(thisCollider);
+            Star.SetActive(true);
 	    }
 
 	    if (stage < -1)

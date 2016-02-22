@@ -7,6 +7,7 @@ public class SmallLoopToBubble : MonoBehaviour
     public bool AnimEnd;
     public Collider2D SmallLoopCollider;
     public GameObject SmallBubble;
+    public GameObject star;
 
     void Update()
     {
@@ -16,6 +17,7 @@ public class SmallLoopToBubble : MonoBehaviour
             GetComponent<Animator>().SetBool("SmallBubble", true);
 
         }
+            star.transform.position = new Vector3(SmallBubble.transform.position.x, SmallBubble.transform.position.y, 0f);
     }
 
     void OnMouseDown()
@@ -23,7 +25,8 @@ public class SmallLoopToBubble : MonoBehaviour
         if (AnimEnd)
         {
             Destroy(GetComponent<Collider2D>());
-            Destroy(SmallBubble);
+            SmallBubble.SetActive(false);
+            star.GetComponent<StarCount>().enabled = true;
         }
     }
 }

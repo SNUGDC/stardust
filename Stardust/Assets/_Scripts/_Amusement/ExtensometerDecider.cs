@@ -6,7 +6,8 @@ public class ExtensometerDecider : MonoBehaviour {
 	public GameObject ExtensometerTarget;
 	public GameObject DragonTarget;
 	public GameObject DragonExTarget;
-	// Use this for initialization
+    public GameObject Star;
+
 	void Start () {
 		DragonTarget.SetActive (false);
 	}
@@ -18,6 +19,7 @@ public class ExtensometerDecider : MonoBehaviour {
 			this.gameObject.GetComponent<Collider2D> ().enabled = false;
 			DragonTarget.SetActive (true);
 			DragonExTarget.SetActive (false);
+            Star.SetActive(true);
 		}
 	}
 }
