@@ -10,13 +10,15 @@ public class MetroTransferOn : MonoBehaviour
     public GameObject wheretogo2;
     public GameObject wheretogo3;
     public GameObject wheretogo4;
+    public GameObject wheretogo5;
+    public GameObject wheretogo6;
     public GameObject doorright;
     public GameObject doorleft;
     public GameObject passengerturn;
     Vector3 passengermove;
     Vector3 doorrightmove;
     Vector3 doorleftmove;
-    float speed = 1.5f;
+    float speed = 2f;
 
 
     void Start()
@@ -38,11 +40,23 @@ public class MetroTransferOn : MonoBehaviour
             doorleft.transform.position = doorleftmove;
 
         }
-        else
+        else if(passenger.transform.position.x>wheretogo2.transform.position.x)
         {
+            Debug.Log(1);
             passenger.GetComponent<SpriteRenderer>().sprite = passengerturn.GetComponent<SpriteRenderer>().sprite;
+            passenger.GetComponent<SpriteRenderer>().sortingOrder = -3;
             passengermove = Vector3.MoveTowards(passenger.transform.position, wheretogo2.transform.position, speed * Time.deltaTime);
             passenger.transform.position = passengermove;
+        }
+
+        else
+        {
+            doorrightmove = Vector3.MoveTowards(doorright.transform.position, wheretogo5.transform.position, speed * Time.deltaTime);
+            doorright.transform.position = doorrightmove;
+            doorleftmove = Vector3.MoveTowards(doorleft.transform.position, wheretogo6.transform.position, speed * Time.deltaTime);
+            doorleft.transform.position = doorleftmove;
+
+
         }
 
 

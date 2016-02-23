@@ -10,6 +10,7 @@ public class MetroBrownDuckMove : MonoBehaviour
     public GameObject duckwheretogo_2;
     public GameObject[] ducklingwheretogo;
     public GameObject star;
+    public GameObject destroyRiver;
     Vector3 duckpos;
     Vector3 ducklingpos;
     float speed=1.5f;
@@ -32,12 +33,16 @@ public class MetroBrownDuckMove : MonoBehaviour
                 duckpos = Vector3.MoveTowards(transform.position, duckwheretogo_1.transform.position, speed * Time.deltaTime);
                 transform.position = duckpos;
             }
-            else
+            else if(transform.position.x>duckwheretogo_2.transform.position.x)
             {
                 ducklingmove = true;
 
-                duckpos = Vector3.MoveTowards(transform.position, duckwheretogo_2.transform.position, speed * Time.deltaTime);
+                duckpos = Vector3.MoveTowards(transform.position, duckwheretogo_2.transform.position, 3*speed * Time.deltaTime);
                 transform.position = duckpos;
+            }
+            else
+            {
+                destroyRiver.SetActive(false);
             }
 
         }

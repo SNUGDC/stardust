@@ -9,28 +9,31 @@ public class MetroTargetExchanger : MonoBehaviour
     public GameObject ExchangedTarget2;
     public bool seatmanmoved = false;
     public GameObject suit;
-    public bool active=false;
+    public bool active = true;
 
-    void Start()
+    private void Start()
     {
-        Debug.Log(33);
+
     }
 
-    void Update()
+    private void Update()
     {
         if (active == true)
         {
             if (suit.GetComponent<MetroStudentsControl>().changedtosuit == true)
             {
+                Debug.Log(32);
+
                 seatmanmoved = true;
             }
+
             StartCoroutine(GetUp());
             StartCoroutine(MoveSeat());
             active = false;
         }
     }
 
-    IEnumerator GetUp()
+    private IEnumerator GetUp()
     {
         yield return new WaitForSeconds(0.1f);
 
@@ -39,7 +42,8 @@ public class MetroTargetExchanger : MonoBehaviour
 
         ExchangedTarget1.SetActive(true);
     }
-    IEnumerator MoveSeat()
+
+    private IEnumerator MoveSeat()
     {
         yield return new WaitForSeconds(1f);
 
