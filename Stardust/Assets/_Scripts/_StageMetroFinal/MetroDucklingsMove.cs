@@ -25,7 +25,7 @@ public class MetroDucklingsMove : MonoBehaviour
                 
                 if (transform.position.x > wheretogo.transform.position.x)
                 {
-                    ducklingpos = Vector3.MoveTowards(transform.position, wheretogo.transform.position, speed * Time.deltaTime);
+                    ducklingpos = Vector3.MoveTowards(transform.position, wheretogo.transform.position, 3*speed * Time.deltaTime);
                     transform.position = ducklingpos;
                 }
             }
