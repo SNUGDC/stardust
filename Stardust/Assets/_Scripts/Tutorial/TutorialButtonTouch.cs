@@ -13,7 +13,7 @@ public class TutorialButtonTouch : MonoBehaviour
 
 
     private GameObject[] PaletteObjects;
-    private GameObject Girl;
+    //private GameObject Girl;
     public Text Textbox_1;
     private GameObject Panel;
 //    private bool ShowText = false;
@@ -21,10 +21,10 @@ public class TutorialButtonTouch : MonoBehaviour
 
 	void Start ()
 	{
-	    Girl = GameObject.FindGameObjectWithTag("Girl");
+	    //Girl = GameObject.FindGameObjectWithTag("Girl");
 	    Panel = GameObject.FindGameObjectWithTag("Panel");
 
-	    GirlMove = Girl.GetComponent<TutorialPlayerController>().Go;
+	    //GirlMove = Girl.GetComponent<TutorialPlayerController>().Go;
 
         Textbox_1.text = "";
         Panel.GetComponent<CanvasGroup>().alpha = 0;
@@ -39,10 +39,7 @@ public class TutorialButtonTouch : MonoBehaviour
         }
 	}
 
-    void OnMouseDown ()
-    {
-        
-    }
+
 
     void OnMouseUp()
     {
@@ -53,8 +50,5 @@ public class TutorialButtonTouch : MonoBehaviour
         QuestSolved = true;
     }
 
-    void OnTriggerEnter()
-    {
-        ShowText = true;
-    }
+    
 }
