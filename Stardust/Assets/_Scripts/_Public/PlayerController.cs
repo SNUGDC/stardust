@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	void MovePlayer()
 	{
-		float touchPositionX = Input.mousePosition.x;
+//		float touchPositionX = Input.mousePosition.x;
 
 		if (Input.mousePosition.x >= (2 * Screen.width / 3) && facingRight)
 		{
