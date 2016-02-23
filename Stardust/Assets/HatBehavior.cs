@@ -10,8 +10,8 @@ public class HatBehavior : MonoBehaviour {
         {	
 			this.GetComponent<Animator> ().enabled = false;
             transform.parent = Player.transform;
-			float PlayerPositionX = Player.transform.position.x;
-			float PlayerPositionY = Player.transform.position.y;
+//			float PlayerPositionX = Player.transform.position.x;
+//			float PlayerPositionY = Player.transform.position.y;
 //            this.transform.localPosition = new Vector3(PlayerPositionX, PlayerPositionY + 1.4f, 0);
 			this.transform.localPosition = new Vector3(0, 1.4f, 0);
         }

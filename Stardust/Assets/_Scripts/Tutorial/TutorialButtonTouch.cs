@@ -16,8 +16,8 @@ public class TutorialButtonTouch : MonoBehaviour
     private GameObject Girl;
     public Text Textbox_1;
     private GameObject Panel;
-    private bool ShowText = false;
-    private bool GirlMove = false;
+//    private bool ShowText = false;
+//    private bool GirlMove = false;
 
 	void Start ()
 	{
