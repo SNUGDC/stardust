@@ -3,7 +3,7 @@ using System.Collections;
 
 public class RabbitEarChop : MonoBehaviour {
 
-	public GameObject Target;
+    public Animator Clockgive;
 	// Use this for initialization
 	void Start () {
 	
@@ -14,7 +14,7 @@ public class RabbitEarChop : MonoBehaviour {
 
 		if (this.gameObject.activeInHierarchy == true) 
 		{
-			Target.SetActive (true);
+            Clockgive.SetBool("Clockgive", true);
 		}
 	}
 }

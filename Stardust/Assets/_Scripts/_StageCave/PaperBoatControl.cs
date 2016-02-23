@@ -11,8 +11,7 @@ public class PaperBoatControl : MonoBehaviour {
     public GameObject[] Papers;
     public GameObject Boat;
     public GameObject PaperPalette;
-
-	// Update is called once per frame
+    
 	void Update () {
 		if (Input.GetMouseButtonDown(0))
 		{
@@ -38,17 +37,19 @@ public class PaperBoatControl : MonoBehaviour {
 
 	    if (Papers[0].activeInHierarchy == true && Papers[3].activeInHierarchy == true)
 	    {
-	        Boat.SetActive(true);
+	        
 	        Pond.GetComponent<PolygonCollider2D>().enabled = false;
-            Destroy(PaperPalette);
-            this.gameObject.SetActive(false);
+            Pond.GetComponent<BoxCollider2D>().enabled = false;
+            
+            StartCoroutine(Wait());
 	    }
         else if (Papers[1].activeInHierarchy == true && Papers[4].activeInHierarchy == true)
         {
-            Boat.SetActive(true);
+            
             Pond.GetComponent<PolygonCollider2D>().enabled = false;
-            Destroy(PaperPalette);
-            this.gameObject.SetActive(false);
+            Pond.GetComponent<BoxCollider2D>().enabled = false;
+            
+            StartCoroutine(Wait());
         }
 
     }
@@ -58,4 +59,13 @@ public class PaperBoatControl : MonoBehaviour {
 		active = true;
 	    Pond.GetComponent<touchedTargetCaller>().targetActive = true;
 	}
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(0.2f);
+        PaperPalette.SetActive(false);
+        yield return new WaitForSeconds(1f);
+        gameObject.SetActive(false);
+        Boat.SetActive(true);
+    }
 }
