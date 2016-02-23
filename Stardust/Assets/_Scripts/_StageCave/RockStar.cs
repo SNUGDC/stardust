@@ -2,13 +2,13 @@
 using System.Collections;
 
 public class RockStar : MonoBehaviour {
-	private GameObject RollingRock;
+	public GameObject RollingRock;
 	private bool StarActive;
 	public GameObject CaveStar;
 
 	// Use this for initialization
 	void Start () {
-		RollingRock = GameObject.Find ("rock");
+//		RollingRock = GameObject.Find ("rock");
 		CaveStar.SetActive (false);
 	}
 	
@@ -23,7 +23,7 @@ public class RockStar : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other == RollingRock) {
+		if (other.gameObject == RollingRock) {
 			StarActive = true;
 		}
 	}
