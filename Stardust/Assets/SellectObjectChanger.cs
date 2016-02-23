@@ -7,6 +7,7 @@ public class SellectObjectChanger : MonoBehaviour {
     public GameObject[] ForestArray;
     public GameObject[] CaveArray;
     public GameObject[] AliceArray;
+    public GameObject[] MetroArray;
 
     public static string SceneName;
     public static int CaveStar;
@@ -54,9 +55,17 @@ public class SellectObjectChanger : MonoBehaviour {
                 ForestArray[i].SetActive(false);
             }
         }
+        for (int i = 0; i < 4; i++)
+        {
+            if (MetroStar != i)
+            {
+                MetroArray[i].SetActive(false);
+            }
+        }
         AmusementArray[AmusementStar].SetActive(true);
         CaveArray[CaveStar].SetActive(true);
         AliceArray[AliceStar].SetActive(true);
         ForestArray[ForestStar].SetActive(true);
+        MetroArray[MetroStar].SetActive(true);
     }
 }
